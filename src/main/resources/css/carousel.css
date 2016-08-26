@@ -1,0 +1,27 @@
+.carousel-one {
+  -fx-skin: "org.wipro.svm.carousel.skin.FlatCarouselSkin";
+}
+
+.carousel-one .tree-cell {
+  -fx-border-width: 0px;
+  -fx-padding: 0px;
+  -fx-indent: 0px;
+  /*-fx-background-color:linear-gradient(from 13px 38px to 52px 52px, reflect, #26558b, #26558b 100%);*/
+  
+  /* Necessary to get rid of indent/padding/spacing caused by disclosure node */
+  -fx-skin: "org.wipro.svm.carousel.internal.skin.EmptyTreeCellSkin";
+}
+
+.carousel-two {
+  -fx-skin: "org.wipro.svm.carousel.skin.FlatCarouselSkin";
+}
+
+.carousel-two .tree-cell {
+  -fx-border-width: 0px;
+  -fx-padding: 0px;
+  -fx-indent: 0px;
+  /*-fx-background-color:linear-gradient(from 13px 38px to 52px 52px, reflect, #26558b, #26558b 100%);*/
+  
+  /* Necessary to get rid of indent/padding/spacing caused by disclosure node */
+  -fx-skin: "org.wipro.svm.carousel.internal.skin.EmptyTreeCellSkin";
+}

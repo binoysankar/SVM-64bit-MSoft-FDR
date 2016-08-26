@@ -1,0 +1,101 @@
+package org.wipro.svm.utils;
+
+public class SvmConstants {
+
+	public static final String PNG_FILE_EXTENSION = ".png";
+	public static final String PNG_FILE_TYPE = "PNG";
+	public static final String GIF_FILE_TYPE = "gif";
+	public static final String DEGREE_CELCIUS = "\u00b0C";
+	public static final String WEATHER_CONDITION = "Condition: ";
+	public static final String WEATHER_HUMIDITY = "Humidity: ";
+	public static final String WEATHER_PRESSURE = "Pressure: ";
+	public static final String WEATHER_WIND_CHILL = "Wind Chill: ";
+	public static final String FR = "fr";
+	public static final String PROD = "prod";
+	public static final String PRODUCT = "Product";
+	public static final String ADDON = "AddOn";
+	public static final String FAVORITES = "Favorites";
+	public static final String SUGGESTIONS = "Suggestions";
+	public static final String ALL = "All";
+	public static final String ONE_HASH = "1#";
+	public static final String MINUS_ONE_HASH = "-1#";
+	public static final String EMPTY_STRING = "";
+	public static final String FONT_GABRIOLA = "Gabriola";
+	public static final String FONT_RUPEE_FORADIAN = "Rupee Foradian";
+	public static final String FONT_ARIAL = "Arial";
+	public static final String FONT_ARIAL_BLACK = "Arial Black";
+	public static final String RECORD_SALES = "record-sales";
+	public static final String TEXT_INPUT = "text-input";
+	public static final String CUSTOM_COMBOBOX = "custom-comboBox";
+	public static final String TILDA = " `";
+	public static final String COMMA = ",";
+	public static final String COLON = ":";
+	public static final String HASH = "#";
+	public static final String EQUALS = "=";
+	public static final String AT_RATE = "@";
+	public static final String ZERO_TO_NINE = "0-9";
+	public static final String NUMERIC = "numeric";
+	public static final String TEXT = "text";
+	public static final String STRING_REPLACE_ONE = "[^0-9]";
+	public static final String STRING_REPLACE_TWO = "[^\\w+.]";
+	public static final String STRING_REPLACE_THREE = "[^\\w]";
+	public static final String SPLIT_PATTERN_DOT = "\\.";
+	public static final String SPLIT_PATTERN_ONE = "(=)|(])|(,)";
+	public static final String SPLIT_PATTERN_TWO = "(=)|(])";
+	public static final String SPLIT_PATTERN_THREE = "(;)|(=)|(#)";
+	public static final String PATTERN = "^\\+(?:[0-9] ?){6,14}[0-9]$";
+	public static final String PLUS = "+";
+	public static final String YES = "Yes";
+	public static final String DECIMAL_FORMAT = "#.00";
+	public static final String ALERT_THREAD = "Alert Thread";
+	public static final String ALERT_TIMEOUT_THREAD = "Alert Timeout Thread";
+	public static final String INVALID_COUPON_THREAD = "Invalid Coupon Thread";
+	public static final String COUNTER_VALUE = "15";
+	public static final String BACK_SLASH = "/";
+	public static final String CVV_QUESTION = "What's a CVV?";
+	public static final String ID = "id";
+	public static final String PRODUCT_COST = "product_cost";
+	public static final String PRODUCT_PHOTO = "product_photo";
+	public static final String HEADER_STRING = "External Sale Ui Plugin;Product;result=<?xml version%3D" + "\"1.0\""
+			+ " encoding%3D" + "\"UTF-8\"" + "?>";
+	public static final String READ_TAG = "read_tag=";
+	public static final String ADD_PRODUCT_TO_CART_ONE = "External Sale UI;AddCartItem_A;productId=";
+	public static final String ADD_PRODUCT_TO_CART_TWO = "&addedQty=";
+	public static final String DISPENSE_PRODUCT = "External Sale UI;Dispense;#";
+	public static final String GET_PRODUCTS_FOR_SALE = "External Sale UI;GetProductsForSale;#";
+	public static final String GET_PRODUCT = "External Sale UI;GetProduct;id=";
+	public static final String GET_PRODUCT_BALANCE = "External Sale UI;GetAvailableStock;productId=";
+	public static final String START_QR_SCAN = "QR Reader Plugin Req;start_read;#";
+	public static final String START_QR_SCAN_CAMERA_INDEX = "QR Reader Plugin Req;start_read;camera_index=1#";
+	public static final String CAPTURING_STATUS = "status=capturing";
+	public static final String SUCCESS_STATUS = "status=success";
+	public static final String TIMEOUT_STATUS = "status=timeout";
+	public static final String SOLD_OUT = "Sold Out";
+	
+	public static final String WEATHER_BASE_URL = "http://api.openweathermap.org/data/2.5/";
+	public static final String WEATHER_SUB_URL = "weather?id=%s&units=metric";
+	public static final String APPID_HEADER = "x-api-key";
+	
+	public static final String NAME = "name";
+	public static final String SYS = "sys";
+	public static final String COUNTRY = "country";
+	public static final String WEATHER = "weather";
+	public static final String MAIN = "main";
+	public static final String TEMPERATURE = "temp";
+	public static final String HUMIDITY = "humidity";
+	public static final String PRESSURE = "pressure";
+	public static final String WIND = "wind";
+	public static final String DEGREES = "deg";
+	
+	public static final String BETAFACE_UPLOAD_NEW_IMAGE = "http://betafaceapi.com/service.svc/UploadNewImage_File";
+	public static final String BETAFACE_GET_IMAGE_INFO = "http://betafaceapi.com/service.svc/GetImageInfo";
+	public static final String BETAFACE_SET_PERSON = "http://betafaceapi.com/service.svc/SetPerson";
+	public static final String BETAFACE_RECOGNIZE_FACES = "http://betafaceapi.com/service.svc/RecognizeFaces";
+	public static final String BETAFACE_GET_RECOGNIZE_RESULT = "http://www.betafaceapi.com/service.svc/GetRecognizeResult";
+	public static final String BETAFACE_DELETE_FACE = "http://www.betafaceapi.com/service.svc/FaceInfo_Delete";
+	
+	public static final String CONTENT_TYPE = "Content-Type";
+	public static final String APPLICATION_XML = "application/xml";
+	public static final String CONTENT_TYPE_JSON = "application/json";
+	public static final String CONTENT_TYPE_OCTET_STREAM = "application/octet-stream";
+}
