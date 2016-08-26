@@ -1,6 +1,7 @@
 package org.wipro.svm.service.impl;
 
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import gnu.io.CommPortIdentifier; 
@@ -19,7 +20,7 @@ public class PrintServiceRXTXImpl implements SerialPortEventListener {
 	* converting the bytes into characters 
 	* making the displayed results codepage independent
 	*/
-	private BufferedReader input;
+	private BufferedReader inputStream;
 	/** The output stream to the port */
 	private OutputStream outputStream;
 	/** Milliseconds to block while waiting for port open */
@@ -60,7 +61,7 @@ public class PrintServiceRXTXImpl implements SerialPortEventListener {
 					SerialPort.PARITY_NONE);
 
 			// open the streams
-			input = new BufferedReader(new InputStreamReader(serialPort.getInputStream()));
+			inputStream = new BufferedReader(new InputStreamReader(serialPort.getInputStream()));
 			outputStream = serialPort.getOutputStream();
 //				String hexInitPrinter = "0x1B0x40";// ESC @
 				String hexCRandLF = "0x1B0x0A0x1B0x0A"; // CR & LF
@@ -88,6 +89,8 @@ public class PrintServiceRXTXImpl implements SerialPortEventListener {
 			serialPort.notifyOnDataAvailable(true);
 		} catch (Exception e) {
 			System.err.println(e.toString());
+		} finally {
+			disconnect();
 		}
 	}
 	
@@ -128,13 +131,28 @@ public class PrintServiceRXTXImpl implements SerialPortEventListener {
 	public synchronized void serialEvent(SerialPortEvent oEvent) {
 		if (oEvent.getEventType() == SerialPortEvent.DATA_AVAILABLE) {
 			try {
-				String inputLine=input.readLine();
+				String inputLine=inputStream.readLine();
 				System.out.println(inputLine);
 			} catch (Exception e) {
 				System.err.println(e.toString());
 			}
 		}
 		// Ignore all the other eventTypes, but you should consider the other ones.
+	}
+	
+	public void disconnect() {
+	    if (serialPort != null) {
+	        try {
+	            // close the i/o streams.
+	        	outputStream.close();
+	        	inputStream.close();
+	        } catch (IOException ex) {
+	        	// Close the port.
+	        	serialPort.close();
+	        }
+	        // Close the port.
+	        serialPort.close();
+	    }
 	}
 
 	public static void main(String[] args) throws Exception {
